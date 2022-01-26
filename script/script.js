@@ -7,7 +7,7 @@ var storyText = ["You wake up in your own sweat, piss and puke. You slowly try t
 var choice1;    // övre svars raden
 var choice2;    // undre svars raden
 
-var storyChapter;
+var storyChapter; // aktuellt kapitel
 
 
 var choiceText1;    // svars text (1?)
@@ -64,12 +64,16 @@ function createChoices(jsonCode) {
     // text på knappen
     if (choiceTextNr == 1) {
        choiceDiv.innerHTML = stories[0].kapitel[0].choices.choiceText1; 
+       choiceDiv.setAttribute("id", stories[0].kapitel[0].titel.next1); 
     } else if (choiceTextNr == 2) {
         choiceDiv.innerHTML = stories[0].kapitel[0].choices.choiceText2;
+        choiceDiv.setAttribute("id", stories[0].kapitel[0].titel.next2); 
     } else if (choiceTextNr == 3) {
         choiceDiv.innerHTML = stories[0].kapitel[0].choices.choiceText3;
+        choiceDiv.setAttribute("id", stories[0].kapitel[0].titel.next3); 
     } else if (choiceTextNr == 4) {
         choiceDiv.innerHTML = stories[0].kapitel[0].choices.choiceText4;
+        choiceDiv.setAttribute("id", stories[0].kapitel[0].titel.next4); 
     }
     ;      // text för svar
     storyChoices.splice(0,1);
@@ -107,6 +111,8 @@ function createChoices(jsonCode) {
 
 function destroyChoices() {
 
+    storyChapter = this.id;
+    alert(storyChapter);
     document.getElementById("choiceContainer1").remove();
     document.getElementById("choiceContainer2").remove();
 

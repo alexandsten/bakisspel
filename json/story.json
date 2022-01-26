@@ -4,14 +4,14 @@
 			"kapitel": [ 
 				{
 					"titel":{
-						"name": "1scream",
-						"next":"5scream",
-                        "name2": "2cry",
-						"next2":"6cry",
-                        "name3": "3more",
-						"next3":"7more",
-                        "name4":"4memory",
-						"next4":"8memory"
+						"name":"1",
+						"next1":"5",
+                        "name2": "2",
+						"next2":"6c",
+                        "name3": "3",
+						"next3":"7m",
+                        "name4":"4m",
+						"next4":"8m"
 
 					},
 					"choices":{
