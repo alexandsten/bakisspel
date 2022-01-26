@@ -23,6 +23,7 @@ function init() {
     
     //
     storyChapter = "1";
+    
 
     let request = new XMLHttpRequest(); // Object för Ajax-anropet
 	request.open("GET","json/story.json",true);
@@ -31,6 +32,7 @@ function init() {
 		if (request.readyState == 4) // readyState 4 --> kommunikationen är klar
 			if (request.status == 200) createChoices(request.responseText); // status 200 (OK) --> filen fanns
 			else document.getElementById("storyText").innerHTML = "Den begärda resursen fanns inte.";}
+            
 }
 
 window.addEventListener("load",init);
