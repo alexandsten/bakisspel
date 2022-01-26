@@ -38,10 +38,10 @@ window.addEventListener("load",init);
 
 function createChoices(jsonCode) {
     storyChapter--; // så att 1 blir 0 osv
-    let choiceTextNr = 1;
-    let choiceArray = ["1","1","2","2"];
-    let stories = JSON.parse(jsonCode).story;
-    storyTop.innerHTML = stories[0].kapitel[storyChapter].story.storyText;
+    let choiceTextNr = 1;   // ska öka för varje varv - så att alla 4 svar får komma med
+    let choiceArray = ["1","1","2","2"]; // nummer för containers
+    let stories = JSON.parse(jsonCode).story;   // json koden
+    storyTop.innerHTML = stories[0].kapitel[storyChapter].story.storyText;  // texten överst, som berättar
 
 
     for (let i = 0; i < 4; i++) {
@@ -61,9 +61,9 @@ function createChoices(jsonCode) {
 
     // text på knappen
     if (choiceTextNr == 1) {
-       choiceDiv.innerHTML = stories[0].kapitel[storyChapter].choices.choiceText1; 
-       choiceDiv.setAttribute("id", stories[0].kapitel[storyChapter].titel.next1); 
-       storyArray.push(stories[0].kapitel[storyChapter].titel.next1);
+       choiceDiv.innerHTML = stories[0].kapitel[storyChapter].choices.choiceText1;  // valets text
+       choiceDiv.setAttribute("id", stories[0].kapitel[storyChapter].titel.next1);  // nästa val - när man trycker
+       storyArray.push(stories[0].kapitel[storyChapter].titel.next1);       // array så att man kan ta bort dem sen med ID
     } else if (choiceTextNr == 2) {
         choiceDiv.innerHTML = stories[0].kapitel[storyChapter].choices.choiceText2;
         choiceDiv.setAttribute("id", stories[0].kapitel[storyChapter].titel.next2); 
@@ -81,8 +81,8 @@ function createChoices(jsonCode) {
 
 
     // append
-    choice1 = document.getElementById("choiceContainer" + choiceArray[0]);
-    choiceArray.splice(0,1);
+    choice1 = document.getElementById("choiceContainer" + choiceArray[0]);  // så att containers får två val var
+    choiceArray.splice(0,1);    // så att de blir lika många val per container
 
     choice1.appendChild(choiceDiv);     // lägg till det skapade svaret till container
 
@@ -111,7 +111,7 @@ function createChoices(jsonCode) {
 
 function destroyChoices() {
 
-
+    // ta bort de tidigare valen
     for (let i = 0; i < 4; i++) {
     storyChapter = this.id;
     document.getElementById(storyArray[0]).remove();
