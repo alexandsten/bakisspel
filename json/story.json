@@ -5,13 +5,13 @@
 				{
 					"titel":{
 						"name":"1",
-						"next1":"5",
-                        "name2": "2",
-						"next2":"6c",
-                        "name3": "3",
-						"next3":"7m",
-                        "name4":"4m",
-						"next4":"8m"
+						"next1":"2",
+                        "name2": "1",
+						"next2":"3",
+                        "name3": "1",
+						"next3":"4",
+                        "name4":"1",
+						"next4":"5"
 
 					},
 					"choices":{
@@ -19,10 +19,7 @@
 						"choiceText2":"Quietly start sobbing",
                         "choiceText3":"Tell yourself that you need a drink",
                         "choiceText4":"Reminiscent of how you embarresed yourself years ago"
-					},
-					"runtime":"1 timme 49 min",
-					"age":"15 årsgräns",
-					"starttime":"20.45"
+					}
 				},
 				{
 					"title":{

@@ -1,5 +1,3 @@
-var storyChoices = ["Scream HELLO IS ANYONE THERE!? as loud as you can", "Quietly start sobbing", " Tell yourself that you need a drink", "Reminiscent of how you embarresed yourself years ago"];
-
 var storyText = ["You wake up in your own sweat, piss and puke. You slowly try to sit up but the whole room is spinning. As you do a pathetic attempt at sitting straight, you fall over onto the floor. You disgust yourself."];
 
 
@@ -39,14 +37,12 @@ window.addEventListener("load",init);
 
 
 function createChoices(jsonCode) {
+    storyChapter--; // så att 1 blir 0 osv
     let choiceTextNr = 1;
     let choiceArray = ["1","1","2","2"];
     let stories = JSON.parse(jsonCode).story;
 
     for (let i = 0; i < 4; i++) {
-
-   
-
     let choiceDiv = document.createElement("div"); // skapa choice div?
     /*
     let info = document.createElement("h3");
@@ -63,20 +59,19 @@ function createChoices(jsonCode) {
 
     // text på knappen
     if (choiceTextNr == 1) {
-       choiceDiv.innerHTML = stories[0].kapitel[0].choices.choiceText1; 
-       choiceDiv.setAttribute("id", stories[0].kapitel[0].titel.next1); 
+       choiceDiv.innerHTML = stories[0].kapitel[storyChapter].choices.choiceText1; 
+       choiceDiv.setAttribute("id", stories[0].kapitel[storyChapter].titel.next1); 
     } else if (choiceTextNr == 2) {
-        choiceDiv.innerHTML = stories[0].kapitel[0].choices.choiceText2;
-        choiceDiv.setAttribute("id", stories[0].kapitel[0].titel.next2); 
+        choiceDiv.innerHTML = stories[0].kapitel[storyChapter].choices.choiceText2;
+        choiceDiv.setAttribute("id", stories[0].kapitel[storyChapter].titel.next2); 
     } else if (choiceTextNr == 3) {
-        choiceDiv.innerHTML = stories[0].kapitel[0].choices.choiceText3;
-        choiceDiv.setAttribute("id", stories[0].kapitel[0].titel.next3); 
+        choiceDiv.innerHTML = stories[0].kapitel[storyChapter].choices.choiceText3;
+        choiceDiv.setAttribute("id", stories[0].kapitel[storyChapter].titel.next3); 
     } else if (choiceTextNr == 4) {
-        choiceDiv.innerHTML = stories[0].kapitel[0].choices.choiceText4;
-        choiceDiv.setAttribute("id", stories[0].kapitel[0].titel.next4); 
+        choiceDiv.innerHTML = stories[0].kapitel[storyChapter].choices.choiceText4;
+        choiceDiv.setAttribute("id", stories[0].kapitel[storyChapter].titel.next4); 
     }
     ;      // text för svar
-    storyChoices.splice(0,1);
 
 
     // append
@@ -105,7 +100,6 @@ function createChoices(jsonCode) {
     */
     choiceTextNr++;
     }
-
 }
 
 
