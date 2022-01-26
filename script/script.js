@@ -1,5 +1,7 @@
 var storyTop;
 
+var storyArray = [];
+
 
 
 var choice1;    // övre svars raden
@@ -61,15 +63,19 @@ function createChoices(jsonCode) {
     if (choiceTextNr == 1) {
        choiceDiv.innerHTML = stories[0].kapitel[storyChapter].choices.choiceText1; 
        choiceDiv.setAttribute("id", stories[0].kapitel[storyChapter].titel.next1); 
+       storyArray.push(stories[0].kapitel[storyChapter].titel.next1);
     } else if (choiceTextNr == 2) {
         choiceDiv.innerHTML = stories[0].kapitel[storyChapter].choices.choiceText2;
         choiceDiv.setAttribute("id", stories[0].kapitel[storyChapter].titel.next2); 
+        storyArray.push(stories[0].kapitel[storyChapter].titel.next2);
     } else if (choiceTextNr == 3) {
         choiceDiv.innerHTML = stories[0].kapitel[storyChapter].choices.choiceText3;
         choiceDiv.setAttribute("id", stories[0].kapitel[storyChapter].titel.next3); 
+        storyArray.push(stories[0].kapitel[storyChapter].titel.next3);
     } else if (choiceTextNr == 4) {
         choiceDiv.innerHTML = stories[0].kapitel[storyChapter].choices.choiceText4;
         choiceDiv.setAttribute("id", stories[0].kapitel[storyChapter].titel.next4); 
+        storyArray.push(stories[0].kapitel[storyChapter].titel.next4);
     }
     ;      // text för svar
 
@@ -105,10 +111,22 @@ function createChoices(jsonCode) {
 
 function destroyChoices() {
 
+
+    for (let i = 0; i < 4; i++) {
     storyChapter = this.id;
-    alert(storyChapter);
-    document.getElementById("choiceContainer1").remove();
-    document.getElementById("choiceContainer2").remove();
+    document.getElementById(storyArray[0]).remove();
+    storyArray.splice(0,1);
+    }
+   
+    // kalla på ny story
+
+    let request = new XMLHttpRequest(); // Object för Ajax-anropet
+	request.open("GET","json/story.json",true);
+	request.send(null); // Skicka begäran till servern
+	request.onreadystatechange = function () { // Funktion för att avläsa status i kommunikationen
+		if (request.readyState == 4) // readyState 4 --> kommunikationen är klar
+			if (request.status == 200) createChoices(request.responseText); // status 200 (OK) --> filen fanns
+			else document.getElementById("storyText").innerHTML = "Den begärda resursen fanns inte.";}
 
 }
 

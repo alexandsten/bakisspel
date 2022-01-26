@@ -24,18 +24,27 @@
 						"storyText":"You wake up in your own sweat, piss and puke. You slowly try to sit up but the whole room is spinning. As you do a pathetic attempt at sitting straight, you fall over onto the floor. You disgust yourself."
 					}
 				},
-				{
-					"title":{
-						"name": "2cry",
-						"next":"6cry"
+                {
+					"titel":{
+						"name":"2",
+						"next1":"6",
+                        "name2": "2",
+						"next2":"7",
+                        "name3": "2",
+						"next3":"8",
+                        "name4":"2",
+						"next4":"9"
+
 					},
 					"choices":{
-						"choiceText":"Quietly start sobbing",
-						"url":"https://www.imdb.com/name/nm0615592/?ref_=nv_sr_srsg_0"
+						"choiceText1":"Beg your neighbor to come and save you",
+						"choiceText2":"Tell your neighbor to eat ass",
+                        "choiceText3":"Decide to search your apartment for a gun",
+                        "choiceText4":"Start making plans - for world domination"
 					},
-					"runtime":"2 timmar 49 min",
-					"age":"15 årsgräns",
-					"starttime":"21.00"
+                    "story":{
+						"storyText":"As you scream from the top of your lungs - IS ANYONE THERE!? You hear the neightbot telling you to shut up."
+					}
 				},
 				{
 					"title":{
