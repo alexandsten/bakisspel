@@ -7,7 +7,7 @@ var choice4;
 var choiceText1;
 
 
-function init {
+function init() {
 
     choice1 = document.getElementById("choiceContainer1");
     choice2 = document.getElementById("choiceContainer2");
