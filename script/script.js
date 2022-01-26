@@ -1,21 +1,56 @@
-var choice1;
-var choice2;
+var choice1;    // övre svars raden
+var choice2;    // undre svars raden
 
-var choice3;
-var choice4;
 
-var choiceText1;
+var choiceText1;    // svars text (1?)
 
 
 function init() {
 
-    choice1 = document.getElementById("choiceContainer1");
-    choice2 = document.getElementById("choiceContainer2");
+    choice1 = document.getElementById("choiceContainer1");  // övre raden
+    choice2 = document.getElementById("choiceContainer2");  // undre raden
 
-
+    createChoices();
 }
 
 window.addEventListener("load",init);
+
+function createChoices() {
+    let choiceDiv = document.createElement("div"); // skapa choice div?
+    /*
+    let info = document.createElement("h3");
+    let cityP = document.createElement("p");
+    let ratingP = document.createElement("p");
+    let priceP = document.createElement("p");
+    */
+
+    // classes / id
+    choiceDiv.setAttribute("class","choices");  // sätt class
+    choiceDiv.setAttribute("id","choice1");     // sätt id
+
+    // text på knappen
+    choiceDiv.innerHTML = "Scream hello is anyone there!? as loud as you can";      // text för svar
+   
+
+
+    // append
+    choice1.appendChild(choiceDiv);     // lägg till det skapade svaret till container
+
+    /* add event listener
+    infoDiv.appendChild(saveNode);
+    infoDiv.appendChild(info);
+    infoDiv.appendChild(cityP);
+    infoDiv.appendChild(priceP);
+    infoDiv.appendChild(ratingP)
+    info.appendChild(nameNode);
+    cityP.appendChild(cityNode);
+    ratingP.appendChild(ratingNode);
+    priceP.appendChild(priceNode);
+    info.addEventListener("click",loadInfo) 
+    saveNode.addEventListener("click",saveLocal) 
+    */
+
+}
 
 
 
