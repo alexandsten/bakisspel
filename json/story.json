@@ -1,0 +1,64 @@
+{	
+	"story": [
+		{
+			"kapitel": [ 
+				{
+					"titel":{
+						"name": "1scream",
+						"next":"5scream"
+					},
+					"regi":{
+						"name":"David F. Sandberg",
+						"url":"https://www.imdb.com/name/nm2497546/?ref_=tt_ov_dr"
+					},
+					"runtime":"1 timme 49 min",
+					"age":"15 årsgräns",
+					"starttime":"20.45"
+				},
+				{
+					"title":{
+						"name": "2cry",
+						"next":"6cry"
+					},
+					"regi":{
+						"name":"Andy Muschietti",
+						"url":"https://www.imdb.com/name/nm0615592/?ref_=nv_sr_srsg_0"
+					},
+					"runtime":"2 timmar 49 min",
+					"age":"15 årsgräns",
+					"starttime":"21.00"
+				},
+				{
+					"title":{
+						"name": "3more",
+						"next":"7more"
+					},
+					"regi":{
+						"name":"David Gordon Green",
+						"url":"https://www.imdb.com/name/nm0337773/"
+					},
+					"runtime":"1 timmar 46 min",
+					"age":"15 årsgräns",
+					"starttime":"21.15"
+				},
+                {
+					"title":{
+						"name": "4memory",
+						"next":"8memory"
+					},
+					"regi":{
+						"name":"Andy Muschietti",
+						"url":"https://www.imdb.com/name/nm0615592/?ref_=nv_sr_srsg_0"
+					},
+					"runtime":"2 timmar 49 min",
+					"age":"15 årsgräns",
+					"starttime":"21.00"
+				}
+			],
+			"genredescription":"En filmgenre som ger tittaren en rysligt hårresande upplevelse.",
+			"contact":{
+				"url":"https://www.filmstaden.se/kundservice/kontakta-oss/"
+			}
+		}
+	]
+}
