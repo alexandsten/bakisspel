@@ -7,8 +7,8 @@
 						"name": "1scream",
 						"next":"5scream"
 					},
-					"regi":{
-						"name":"David F. Sandberg",
+					"choices":{
+						"choiceText":"Scream HELLO IS ANYONE THERE!? as loud as you can",
 						"url":"https://www.imdb.com/name/nm2497546/?ref_=tt_ov_dr"
 					},
 					"runtime":"1 timme 49 min",
@@ -20,8 +20,8 @@
 						"name": "2cry",
 						"next":"6cry"
 					},
-					"regi":{
-						"name":"Andy Muschietti",
+					"choices":{
+						"choiceText":"Quietly start sobbing",
 						"url":"https://www.imdb.com/name/nm0615592/?ref_=nv_sr_srsg_0"
 					},
 					"runtime":"2 timmar 49 min",
@@ -33,8 +33,8 @@
 						"name": "3more",
 						"next":"7more"
 					},
-					"regi":{
-						"name":"David Gordon Green",
+					"choices":{
+						"choiceText":"Tell yourself that you need a drink",
 						"url":"https://www.imdb.com/name/nm0337773/"
 					},
 					"runtime":"1 timmar 46 min",
@@ -46,8 +46,8 @@
 						"name": "4memory",
 						"next":"8memory"
 					},
-					"regi":{
-						"name":"Andy Muschietti",
+					"choices":{
+						"choiceText":"Reminiscent of how you embarresed yourself years ago",
 						"url":"https://www.imdb.com/name/nm0615592/?ref_=nv_sr_srsg_0"
 					},
 					"runtime":"2 timmar 49 min",
