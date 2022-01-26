@@ -16,6 +16,12 @@ function init() {
 window.addEventListener("load",init);
 
 function createChoices() {
+    let choiceArray = ["1","1","2","2"];
+
+    for (let i = 0; i < 4; i++) {
+
+   
+
     let choiceDiv = document.createElement("div"); // skapa choice div?
     /*
     let info = document.createElement("h3");
@@ -26,7 +32,9 @@ function createChoices() {
 
     // classes / id
     choiceDiv.setAttribute("class","choices");  // sätt class
-    choiceDiv.setAttribute("id","choice1");     // sätt id
+    choiceDiv.setAttribute("id","choice" + choiceArray[0]);     // sätt id
+   
+
 
     // text på knappen
     choiceDiv.innerHTML = "Scream hello is anyone there!? as loud as you can";      // text för svar
@@ -34,6 +42,9 @@ function createChoices() {
 
 
     // append
+    choice1 = document.getElementById("choiceContainer" + choiceArray[0]);
+    choiceArray.splice(0,1);
+
     choice1.appendChild(choiceDiv);     // lägg till det skapade svaret till container
 
     /* add event listener
@@ -49,6 +60,7 @@ function createChoices() {
     info.addEventListener("click",loadInfo) 
     saveNode.addEventListener("click",saveLocal) 
     */
+    }
 
 }
 
