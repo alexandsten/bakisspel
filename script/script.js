@@ -1,4 +1,4 @@
-var storyText = ["You wake up in your own sweat, piss and puke. You slowly try to sit up but the whole room is spinning. As you do a pathetic attempt at sitting straight, you fall over onto the floor. You disgust yourself."];
+var storyTop;
 
 
 
@@ -15,12 +15,10 @@ function init() {
 
     choice1 = document.getElementById("choiceContainer1");  // övre raden
     choice2 = document.getElementById("choiceContainer2");  // undre raden
-    story = document.getElementById("storyText");  // undre raden
 
     // story
-    let storyTop = document.createElement("p"); // skapa choice div?
-    storyTop.innerHTML = storyText[0];
-    story.appendChild(storyTop);
+    storyTop = document.getElementById("storyText");  // undre raden
+    
     //
     storyChapter = "1";
 
@@ -41,6 +39,8 @@ function createChoices(jsonCode) {
     let choiceTextNr = 1;
     let choiceArray = ["1","1","2","2"];
     let stories = JSON.parse(jsonCode).story;
+    storyTop.innerHTML = stories[0].kapitel[storyChapter].story.storyText;
+
 
     for (let i = 0; i < 4; i++) {
     let choiceDiv = document.createElement("div"); // skapa choice div?
