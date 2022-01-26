@@ -7,6 +7,8 @@ var storyText = ["You wake up in your own sweat, piss and puke. You slowly try t
 var choice1;    // övre svars raden
 var choice2;    // undre svars raden
 
+var storyChapter;
+
 
 var choiceText1;    // svars text (1?)
 
@@ -22,14 +24,22 @@ function init() {
     storyTop.innerHTML = storyText[0];
     story.appendChild(storyTop);
     //
+    storyChapter = "1";
 
-    createChoices();
+    let request = new XMLHttpRequest(); // Object för Ajax-anropet
+	request.open("GET","json/story.json",true);
+	request.send(null); // Skicka begäran till servern
+	request.onreadystatechange = function () { // Funktion för att avläsa status i kommunikationen
+		if (request.readyState == 4) // readyState 4 --> kommunikationen är klar
+			if (request.status == 200) createChoices(request.responseText); // status 200 (OK) --> filen fanns
+			else document.getElementById("storyText").innerHTML = "Den begärda resursen fanns inte.";}
 }
 
 window.addEventListener("load",init);
 
-function createChoices() {
+function createChoices(jsonCode) {
     let choiceArray = ["1","1","2","2"];
+    let stories = JSON.parse(jsonCode).story;
 
     for (let i = 0; i < 4; i++) {
 
@@ -50,7 +60,7 @@ function createChoices() {
 
 
     // text på knappen
-    choiceDiv.innerHTML = storyChoices[0];      // text för svar
+    choiceDiv.innerHTML = stories[0].kapitel[0].choices.choiceText;      // text för svar
     storyChoices.splice(0,1);
 
 

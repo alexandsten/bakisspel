@@ -5,11 +5,20 @@
 				{
 					"titel":{
 						"name": "1scream",
-						"next":"5scream"
+						"next":"5scream",
+                        "name2": "2cry",
+						"next2":"6cry",
+                        "name3": "3more",
+						"next3":"7more",
+                        "name4":"4memory",
+						"next4":"8memory"
+
 					},
 					"choices":{
 						"choiceText":"Scream HELLO IS ANYONE THERE!? as loud as you can",
-						"url":"https://www.imdb.com/name/nm2497546/?ref_=tt_ov_dr"
+						"choiceText2":"Quietly start sobbing",
+                        "choiceText3":"Tell yourself that you need a drink",
+                        "choiceText4":"Reminiscent of how you embarresed yourself years ago"
 					},
 					"runtime":"1 timme 49 min",
 					"age":"15 årsgräns",
