@@ -40,8 +40,8 @@ function createChoices(jsonCode) {
     storyChapter--; // så att 1 blir 0 osv
     let choiceTextNr = 1;   // ska öka för varje varv - så att alla 4 svar får komma med
     let choiceArray = ["1","1","2","2"]; // nummer för containers
-    let stories = JSON.parse(jsonCode).story;   // json koden
-    storyTop.innerHTML = stories[0].kapitel[storyChapter].story.storyText;  // texten överst, som berättar
+    let stories = JSON.parse(jsonCode).story;
+    storyTop.innerHTML = stories[0].kapitel[storyChapter].story.storyText;  // texten på toppen av skärmen
 
 
     for (let i = 0; i < 4; i++) {
@@ -61,9 +61,9 @@ function createChoices(jsonCode) {
 
     // text på knappen
     if (choiceTextNr == 1) {
-       choiceDiv.innerHTML = stories[0].kapitel[storyChapter].choices.choiceText1;  // valets text
-       choiceDiv.setAttribute("id", stories[0].kapitel[storyChapter].titel.next1);  // nästa val - när man trycker
-       storyArray.push(stories[0].kapitel[storyChapter].titel.next1);       // array så att man kan ta bort dem sen med ID
+       choiceDiv.innerHTML = stories[0].kapitel[storyChapter].choices.choiceText1; // text för valen
+       choiceDiv.setAttribute("id", stories[0].kapitel[storyChapter].titel.next1);  // id för valen - så man vet vad nästa val är
+       storyArray.push(stories[0].kapitel[storyChapter].titel.next1);   //  array för att sedan kunna ta bort valen
     } else if (choiceTextNr == 2) {
         choiceDiv.innerHTML = stories[0].kapitel[storyChapter].choices.choiceText2;
         choiceDiv.setAttribute("id", stories[0].kapitel[storyChapter].titel.next2); 
