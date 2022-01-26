@@ -51,6 +51,11 @@ function createChoices() {
 
     choice1.appendChild(choiceDiv);     // lägg till det skapade svaret till container
 
+
+    // eventlisteners
+
+    choiceDiv.addEventListener("click",destroyChoices);
+
     /* add event listener
     infoDiv.appendChild(saveNode);
     infoDiv.appendChild(info);
@@ -65,6 +70,14 @@ function createChoices() {
     saveNode.addEventListener("click",saveLocal) 
     */
     }
+
+}
+
+
+function destroyChoices() {
+
+    document.getElementById("choiceContainer1").remove();
+    document.getElementById("choiceContainer2").remove();
 
 }
 
