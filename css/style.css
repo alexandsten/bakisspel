@@ -5,7 +5,13 @@ body {
 }
 
 
-.choiceContainer {
+#choiceContainer1 {
+    display: flex;
+  /*  background-image:url(../img/bg.jpg); */
+  background-color: rgb(0, 0, 0);
+}
+
+#choiceContainer2 {
     display: flex;
   /*  background-image:url(../img/bg.jpg); */
   background-color: rgb(0, 0, 0);
