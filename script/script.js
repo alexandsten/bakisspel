@@ -1,3 +1,7 @@
+var storyChoices = ["Scream HELLO IS ANYONE THERE!? as loud as you can", "Quietly start sobbing", " Tell yourself that you need a drink", "Reminiscent of how you embarresed yourself years ago"];
+
+
+
 var choice1;    // övre svars raden
 var choice2;    // undre svars raden
 
@@ -37,8 +41,8 @@ function createChoices() {
 
 
     // text på knappen
-    choiceDiv.innerHTML = "Scream hello is anyone there!? as loud as you can";      // text för svar
-   
+    choiceDiv.innerHTML = storyChoices[0];      // text för svar
+    storyChoices.splice(0,1);
 
 
     // append
