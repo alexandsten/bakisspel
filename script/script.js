@@ -37,7 +37,9 @@ function init() {
 
 window.addEventListener("load",init);
 
+
 function createChoices(jsonCode) {
+    let choiceTextNr = 1;
     let choiceArray = ["1","1","2","2"];
     let stories = JSON.parse(jsonCode).story;
 
@@ -60,7 +62,16 @@ function createChoices(jsonCode) {
 
 
     // text på knappen
-    choiceDiv.innerHTML = stories[0].kapitel[0].choices.choiceText;      // text för svar
+    if (choiceTextNr == 1) {
+       choiceDiv.innerHTML = stories[0].kapitel[0].choices.choiceText1; 
+    } else if (choiceTextNr == 2) {
+        choiceDiv.innerHTML = stories[0].kapitel[0].choices.choiceText2;
+    } else if (choiceTextNr == 3) {
+        choiceDiv.innerHTML = stories[0].kapitel[0].choices.choiceText3;
+    } else if (choiceTextNr == 4) {
+        choiceDiv.innerHTML = stories[0].kapitel[0].choices.choiceText4;
+    }
+    ;      // text för svar
     storyChoices.splice(0,1);
 
 
@@ -88,6 +99,7 @@ function createChoices(jsonCode) {
     info.addEventListener("click",loadInfo) 
     saveNode.addEventListener("click",saveLocal) 
     */
+    choiceTextNr++;
     }
 
 }
