@@ -2,7 +2,7 @@
 	"story": [
 		{
 			"kapitel": [ 
-				{
+				{       
 					"titel":{
 						"name":"1",
 						"next1":"2",
