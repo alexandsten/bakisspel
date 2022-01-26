@@ -1,0 +1,31 @@
+body {
+    color: white;
+    background-color: rgb(0, 0, 0);
+    background-color: #000;
+}
+
+
+#choiceContainer {
+    display: flex;
+  /*  background-image:url(../img/bg.jpg); */
+  background-color: rgb(0, 0, 0);
+}
+
+.choices {
+    
+    height: 50%;
+    width: 80%;
+    margin: 15px 30px 15px;
+    background-color: rgb(29, 29, 31);;
+    padding: 10px;
+    border-radius: 15px;
+    border: white;
+    box-shadow: -2px 2px 2px #49bcdf;
+}
+
+#content-wrapper2 {
+    height: 300px;
+    width: 40%;
+    padding: 15px;
+    background-color: rgb(3, 3, 31);
+}
