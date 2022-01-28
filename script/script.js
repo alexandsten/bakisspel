@@ -76,13 +76,16 @@ function nextChoices() {
 
     storyChapter++;
    
-
+// vilken story som ska visas innan nästa "val", kan även välja vilken av de 3 seten av val som ska visas vid nästa val
     if (this.id == "choices1") {
         alert(storyNext1)
+        /* nästa val = 1 / de goda valen */
     } else if (this.id == "choices2") {
         alert(storyNext2)
+         /* nästa val = 2 / de neutrala valen */
     }   else if (this.id == "choices2") {
         alert(storyNext3)
+         /* nästa val = 3 / de onda valen */
     }
 
     
