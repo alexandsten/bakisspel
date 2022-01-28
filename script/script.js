@@ -1,7 +1,7 @@
 var storyTop;   // storyn som visas högst upp
-var storyNext1;
-var storyNext2;
-var storyNext3;
+var storyNext1; // nästa story för knapp 1
+var storyNext2; // nästa story för knapp 2
+var storyNext3; // nästa story för knapp 3
 
 var choices1; // knapp 1
 var choices2; // knapp 2
