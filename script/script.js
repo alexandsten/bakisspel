@@ -3,6 +3,8 @@ var storyNext1; // nästa story för knapp 1
 var storyNext2; // nästa story för knapp 2
 var storyNext3; // nästa story för knapp 3
 
+var goodNeutralEvil;
+
 var choices1; // knapp 1
 var choices2; // knapp 2
 var choices3; // knapp 3
@@ -29,6 +31,7 @@ function init() {
     
     //
     storyChapter = "1";
+    goodNeutralEvil = "neutral";
     
     let request = new XMLHttpRequest(); // Object för Ajax-anropet
 	request.open("GET","json/story.json",true);
