@@ -20,7 +20,6 @@ function init() {
     choices1 = document.getElementById("choices1");
     choices2 = document.getElementById("choices2");
     choices3 = document.getElementById("choices3");
-    choices4 = document.getElementById("choices4");
 
     // story
     storyTop = document.getElementById("storyText");  // undre raden
@@ -42,48 +41,35 @@ window.addEventListener("load",init);
 
 
 function createChoices(jsonCode) {
-    storyChapter--; // så att 1 blir 0 osv
+
     let stories = JSON.parse(jsonCode).story;
-    storyTop.innerHTML = stories[0].kapitel[storyChapter].story.storyText;  // texten på toppen av skärmen
-
-
-
+    
     // testa ett nytt sätt 
 
-    for (let i = 0; i < stories.length; i++) {
+    for (let i = 0; i < stories[0].kapitel.length; i++) {
         if (stories[0].kapitel[i].titel.name == storyChapter) {
-            console.log(storyChapter);
+            choices1.innerHTML = stories[0].kapitel[i].choices.choiceText1; // text för valen   
+         /*   choices1.id = stories[0].kapitel[i].titel.next1;  // id för valen - så man vet vad nästa val är */
+            choices1.addEventListener("click",nextChoices);
+      
+            choices2.innerHTML = stories[0].kapitel[i].choices.choiceText2;
+        /*    choices2.id = stories[0].kapitel[i].titel.next2;  */
+            choices2.addEventListener("click",nextChoices);
+      
+            choices3.innerHTML = stories[0].kapitel[i].choices.choiceText3;
+        /*    choices3.id = stories[0].kapitel[i].titel.next3; */
+            choices3.addEventListener("click",nextChoices);
+
+            storyTop.innerHTML = stories[0].kapitel[i].story.storyText;  // texten på toppen av skärmen
         }
     }
-
-   
-    // text på knappen
-    
-        choices1.innerHTML = stories[0].kapitel[storyChapter].choices.choiceText1; // text för valen
-        choices1.id = stories[0].kapitel[storyChapter].titel.next1;  // id för valen - så man vet vad nästa val är
-        choices1.addEventListener("click",destroyChoices);
-  
-        choices2.innerHTML = stories[0].kapitel[storyChapter].choices.choiceText2;
-        choices2.id = stories[0].kapitel[storyChapter].titel.next2; 
-        choices2.addEventListener("click",destroyChoices);
-  
-        choices3.innerHTML = stories[0].kapitel[storyChapter].choices.choiceText3;
-        choices3.id = stories[0].kapitel[storyChapter].titel.next3; 
-        choices3.addEventListener("click",destroyChoices);
-  
-        choices4.innerHTML = stories[0].kapitel[storyChapter].choices.choiceText4;
-        choices4.id = stories[0].kapitel[storyChapter].titel.next4; 
-        choices4.addEventListener("click",destroyChoices);
-  
-        // text för svar
-   
 }
 
 
-function destroyChoices() {
+function nextChoices() {
 
-    storyChapter = this.id; // byt kapitel, den man tryckte på
- 
+    storyChapter++;
+    
     // kalla på ny story
 
     let request = new XMLHttpRequest(); // Object för Ajax-anropet
