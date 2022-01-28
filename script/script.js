@@ -51,9 +51,14 @@ function createChoices(jsonCode) {
 
     for (let i = 0; i < stories[0].kapitel.length; i++) {
         if (stories[0].kapitel[i].titel.name == storyChapter) {
+            /*
+            lägg in if satser för good/neutral/evil här - så att det blir ett av de tre som visas
+            */
+
             choices1.innerHTML = stories[0].kapitel[i].choices.choiceText1; // text för valen   
         /*    choices1.id = stories[0].kapitel[i].titel.next1Text;  // kan ha texten inför nästa val här */
             storyNext1 = stories[0].kapitel[i].titel.next1Text;
+         
             choices1.addEventListener("click",nextChoices);
       
             choices2.innerHTML = stories[0].kapitel[i].choices.choiceText2;
