@@ -52,7 +52,7 @@ function createChoices(jsonCode) {
 
     for (let i = 0; i < stories.length; i++) {
         if (stories[0].kapitel[i].titel.name == storyChapter) {
-            alert(storyChapter);
+            console.log(stories);
         }
     }
 
