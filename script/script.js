@@ -45,6 +45,17 @@ function createChoices(jsonCode) {
     storyChapter--; // så att 1 blir 0 osv
     let stories = JSON.parse(jsonCode).story;
     storyTop.innerHTML = stories[0].kapitel[storyChapter].story.storyText;  // texten på toppen av skärmen
+
+
+
+    // testa ett nytt sätt 
+
+    for (let i = 0; i < stories.length; i++) {
+        if (stories[0].kapitel[i].titel.name == storyChapter) {
+            alert(storyChapter);
+        }
+    }
+
    
     // text på knappen
     
