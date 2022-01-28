@@ -49,7 +49,7 @@ function createChoices(jsonCode) {
     for (let i = 0; i < stories[0].kapitel.length; i++) {
         if (stories[0].kapitel[i].titel.name == storyChapter) {
             choices1.innerHTML = stories[0].kapitel[i].choices.choiceText1; // text för valen   
-         /*   choices1.id = stories[0].kapitel[i].titel.next1;  // id för valen - så man vet vad nästa val är */
+         /*   choices1.id = stories[0].kapitel[i].titel.next1;  // kan ha texten inför nästa val här */
             choices1.addEventListener("click",nextChoices);
       
             choices2.innerHTML = stories[0].kapitel[i].choices.choiceText2;
