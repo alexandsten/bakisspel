@@ -1,4 +1,7 @@
 var storyTop;   // storyn som visas högst upp
+var storyNext1;
+var storyNext2;
+var storyNext3;
 
 var choices1; // knapp 1
 var choices2; // knapp 2
@@ -49,15 +52,18 @@ function createChoices(jsonCode) {
     for (let i = 0; i < stories[0].kapitel.length; i++) {
         if (stories[0].kapitel[i].titel.name == storyChapter) {
             choices1.innerHTML = stories[0].kapitel[i].choices.choiceText1; // text för valen   
-         /*   choices1.id = stories[0].kapitel[i].titel.next1;  // kan ha texten inför nästa val här */
+        /*    choices1.id = stories[0].kapitel[i].titel.next1Text;  // kan ha texten inför nästa val här */
+            storyNext1 = stories[0].kapitel[i].titel.next1Text;
             choices1.addEventListener("click",nextChoices);
       
             choices2.innerHTML = stories[0].kapitel[i].choices.choiceText2;
         /*    choices2.id = stories[0].kapitel[i].titel.next2;  */
+            storyNext2 = stories[0].kapitel[i].titel.next1Text;
             choices2.addEventListener("click",nextChoices);
       
             choices3.innerHTML = stories[0].kapitel[i].choices.choiceText3;
         /*    choices3.id = stories[0].kapitel[i].titel.next3; */
+            storyNext3 = stories[0].kapitel[i].titel.next1Text;
             choices3.addEventListener("click",nextChoices);
 
             storyTop.innerHTML = stories[0].kapitel[i].story.storyText;  // texten på toppen av skärmen
@@ -69,6 +75,16 @@ function createChoices(jsonCode) {
 function nextChoices() {
 
     storyChapter++;
+   
+
+    if (this.id == "choices1") {
+        alert(storyNext1)
+    } else if (this.id == "choices2") {
+        alert(storyNext2)
+    }   else if (this.id == "choices2") {
+        alert(storyNext3)
+    }
+
     
     // kalla på ny story
 

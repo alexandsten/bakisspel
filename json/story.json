@@ -6,6 +6,7 @@
 					"titel":{
 						"name":"1",
 						"next1":"2",
+						"next1Text": "You SCREAM. From the bottom of your lungs. A gutteral growl",
                         "name2": "1",
 						"next2":"3",
                         "name3": "1",
@@ -28,6 +29,7 @@
 					"titel":{
 						"name":"2",
 						"next1":"6",
+						"next1Text": "You SCREAM. From the bottom of your lungs. A gutteral growl",
                         "name2": "2",
 						"next2":"7",
                         "name3": "2",
@@ -47,8 +49,8 @@
 					}
 				},
 				{
-					"title":{
-						"name": "3more",
+					"titel":{
+						"name": "3",
 						"next":"7more"
 					},
 					"choices":{
@@ -60,8 +62,8 @@
 					"starttime":"21.15"
 				},
                 {
-					"title":{
-						"name": "4memory",
+					"titel":{
+						"name": "4",
 						"next":"8memory"
 					},
 					"choices":{
