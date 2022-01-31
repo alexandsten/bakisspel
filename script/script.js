@@ -3,7 +3,7 @@ var storyNext1; // nästa story för knapp 1
 var storyNext2; // nästa story för knapp 2
 var storyNext3; // nästa story för knapp 3
 
-var goodNeutralEvil;
+var goodNeutralEvil; // väljer om det aktuella valen är good / neutral / evil
 
 var choices1; // knapp 1
 var choices2; // knapp 2
@@ -13,7 +13,7 @@ var choices4; // knapp 4
 var choice1;    // övre svars raden
 var choice2;    // undre svars raden
 
-var storyChapter; // aktuellt kapitel
+var storyChapter; // aktuellt kapitel - mellan 1- 10
 var choiceText1;    // svars text (1?)
 
 
