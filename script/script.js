@@ -13,7 +13,7 @@ var choices4; // knapp 4
 var choice1;    // övre svars raden
 var choice2;    // undre svars raden
 
-var storyChapter; // aktuellt kapitel - mellan 1- 10
+var storyChapter; // aktuellt kapitel - mellan 1- 10 ** får nog ändra dessa så de passar med good neutral evil
 var choiceText1;    // svars text (1?)
 
 
