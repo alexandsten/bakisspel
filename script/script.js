@@ -168,7 +168,7 @@ function nextChoices() {
     } else if (this.id == "choices2") {
         alert("choice 2 " + storyNext2);
          /* nästa val = 2 / de neutrala valen */
-    }   else if (this.id == "choices2") {
+    }   else if (this.id == "choices3") {
         alert("choice 3 " + storyNext3);
          /* nästa val = 3 / de onda valen */
     }
