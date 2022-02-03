@@ -102,9 +102,9 @@ function createChoices(jsonCode) {
                 storyNext2 = stories[0].kapitel[i].titel.next1Text;
                 storyNext3 = stories[0].kapitel[i].titel.next1Text;
             }
-            choices1.addEventListener("click",nextChoices);
-            choices2.addEventListener("click",nextChoices);
-            choices3.addEventListener("click",nextChoices);
+            choices1.addEventListener("click",nextChoices);    // här kan jag nog ändra good / neutral / evil - att de leder till olika
+            choices2.addEventListener("click",nextChoices);    // här kan jag nog ändra good / neutral / evil - att de leder till olika
+            choices3.addEventListener("click",nextChoices);    // här kan jag nog ändra good / neutral / evil - att de leder till olika
 
             storyTop.innerHTML = stories[0].kapitel[i].story.storyText;  // texten på toppen av skärmen
             ////////////////////////////////////////////////
