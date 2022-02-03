@@ -16,6 +16,10 @@ var choice2;    // undre svars raden
 var storyChapter; // aktuellt kapitel - mellan 1- 10 ** får nog ändra dessa så de passar med good neutral evil
 var choiceText1;    // svars text (1?)
 
+var paraChoice1;
+var paraChoice2;
+var paraChoice3;
+
 
 function init() {
 
@@ -54,7 +58,8 @@ function createChoices(jsonCode) {
     var numbers = ["0", "1", "2", "3"];      // 3 nummer, ett för varje val
    
     var randomNr;
-    var bananFluga;
+   /// parametrar för good neutral evil
+
 
     // testa ett nytt sätt 
 
@@ -79,7 +84,10 @@ function createChoices(jsonCode) {
                 storyNext2 = stories[0].kapitel[i].titel.next1Text;
                 storyNext3 = stories[0].kapitel[i].titel.next1Text;
 
-                bananFluga = "gagnam style";
+                //
+                paraChoice1 = "good";
+                paraChoice2 = "neutral";
+                paraChoice3 = "evil";
             } else if (randomNr == "1") {
                 choices1.innerHTML = stories[0].kapitel[i].choices.choiceText3;
                 choices2.innerHTML = stories[0].kapitel[i].choices.choiceText2;
@@ -89,7 +97,10 @@ function createChoices(jsonCode) {
                 storyNext2 = stories[0].kapitel[i].titel.next1Text;
                 storyNext3 = stories[0].kapitel[i].titel.next1Text;
 
-                bananFluga = "gagnam";
+                 //
+                 paraChoice1 = "evil";
+                 paraChoice2 = "neutral";
+                 paraChoice3 = "good";
             } else if (randomNr == "2") {
                 choices1.innerHTML = stories[0].kapitel[i].choices.choiceText3;
                 choices2.innerHTML = stories[0].kapitel[i].choices.choiceText1;
@@ -99,7 +110,11 @@ function createChoices(jsonCode) {
                 storyNext2 = stories[0].kapitel[i].titel.next1Text;
                 storyNext3 = stories[0].kapitel[i].titel.next1Text;
 
-                bananFluga = "style";
+                //
+                 //
+                 paraChoice1 = "evil";
+                 paraChoice2 = "good";
+                 paraChoice3 = "neutral";
             }   else if (randomNr == "3") {
                 choices1.innerHTML = stories[0].kapitel[i].choices.choiceText2;
                 choices2.innerHTML = stories[0].kapitel[i].choices.choiceText3;
@@ -109,15 +124,16 @@ function createChoices(jsonCode) {
                 storyNext2 = stories[0].kapitel[i].titel.next1Text;
                 storyNext3 = stories[0].kapitel[i].titel.next1Text;
 
-                bananFluga = "gagnam gag";
+                //
+                 //
+                 paraChoice1 = "neutral";
+                 paraChoice2 = "evil";
+                 paraChoice3 = "good";
             }
 
-            var val2 = "helskumt";      // ge valen sitt good neutral evil såhär
-
-
-            choices1.addEventListener("click",function() { nextChoices(bananFluga); });    // här kan jag nog ändra good / neutral / evil - att de leder till olika
-            choices2.addEventListener("click",function() { nextChoices(val2); });    // här kan jag nog ändra good / neutral / evil - att de leder till olika
-            choices3.addEventListener("click",function() { nextChoices(bananFluga); });    // här kan jag nog ändra good / neutral / evil - att de leder till olika
+            choices1.addEventListener("click",function() { nextChoices(paraChoice1); });    // här kan jag nog ändra good / neutral / evil - att de leder till olika
+            choices2.addEventListener("click",function() { nextChoices(paraChoice2); });    // här kan jag nog ändra good / neutral / evil - att de leder till olika
+            choices3.addEventListener("click",function() { nextChoices(paraChoice3); });    // här kan jag nog ändra good / neutral / evil - att de leder till olika
 
             storyTop.innerHTML = stories[0].kapitel[i].story.storyText;  // texten på toppen av skärmen
             ////////////////////////////////////////////////
@@ -171,6 +187,17 @@ function createChoices(jsonCode) {
 
 
 function nextChoices(bananFluga) {
+
+
+    choices1.removeEventListener("click",function() { nextChoices(paraChoice1); });    // här kan jag nog ändra good / neutral / evil - att de leder till olika
+    choices2.removeEventListener("click",function() { nextChoices(paraChoice2); });    // här kan jag nog ändra good / neutral / evil - att de leder till olika
+    choices3.removeEventListener("click",function() { nextChoices(paraChoice3); });    // här kan jag nog ändra good / neutral / 
+
+    paraChoice1 = "";
+    paraChoice2 = "";
+    paraChoice3 = "";
+
+    
 
     alert(bananFluga);
 
