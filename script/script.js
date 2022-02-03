@@ -52,8 +52,9 @@ function createChoices(jsonCode) {
 
     // för att randomiza
     var numbers = ["0", "1", "2", "3"];      // 3 nummer, ett för varje val
-    console.log(numbers);
+   
     var randomNr;
+    var bananFluga;
 
     // testa ett nytt sätt 
 
@@ -66,7 +67,7 @@ function createChoices(jsonCode) {
         if (stories[0].kapitel[i].titel.name == storyChapter) {
             ////// jobbig kod för random val 1
 
-            console.log(randomNr);
+            
             
 
             if (randomNr == "0") {
@@ -77,6 +78,8 @@ function createChoices(jsonCode) {
                 storyNext1 = stories[0].kapitel[i].titel.next1Text;
                 storyNext2 = stories[0].kapitel[i].titel.next1Text;
                 storyNext3 = stories[0].kapitel[i].titel.next1Text;
+
+                bananFluga = "gagnam style";
             } else if (randomNr == "1") {
                 choices1.innerHTML = stories[0].kapitel[i].choices.choiceText3;
                 choices2.innerHTML = stories[0].kapitel[i].choices.choiceText2;
@@ -85,6 +88,8 @@ function createChoices(jsonCode) {
                 storyNext1 = stories[0].kapitel[i].titel.next1Text;
                 storyNext2 = stories[0].kapitel[i].titel.next1Text;
                 storyNext3 = stories[0].kapitel[i].titel.next1Text;
+
+                bananFluga = "gagnam";
             } else if (randomNr == "2") {
                 choices1.innerHTML = stories[0].kapitel[i].choices.choiceText3;
                 choices2.innerHTML = stories[0].kapitel[i].choices.choiceText1;
@@ -93,6 +98,8 @@ function createChoices(jsonCode) {
                 storyNext1 = stories[0].kapitel[i].titel.next1Text;
                 storyNext2 = stories[0].kapitel[i].titel.next1Text;
                 storyNext3 = stories[0].kapitel[i].titel.next1Text;
+
+                bananFluga = "style";
             }   else if (randomNr == "3") {
                 choices1.innerHTML = stories[0].kapitel[i].choices.choiceText2;
                 choices2.innerHTML = stories[0].kapitel[i].choices.choiceText3;
@@ -101,10 +108,16 @@ function createChoices(jsonCode) {
                 storyNext1 = stories[0].kapitel[i].titel.next1Text;
                 storyNext2 = stories[0].kapitel[i].titel.next1Text;
                 storyNext3 = stories[0].kapitel[i].titel.next1Text;
+
+                bananFluga = "gagnam gag";
             }
-            choices1.addEventListener("click",nextChoices);    // här kan jag nog ändra good / neutral / evil - att de leder till olika
-            choices2.addEventListener("click",nextChoices);    // här kan jag nog ändra good / neutral / evil - att de leder till olika
-            choices3.addEventListener("click",nextChoices);    // här kan jag nog ändra good / neutral / evil - att de leder till olika
+
+            var val2 = "helskumt";      // ge valen sitt good neutral evil såhär
+
+
+            choices1.addEventListener("click",function() { nextChoices(bananFluga); });    // här kan jag nog ändra good / neutral / evil - att de leder till olika
+            choices2.addEventListener("click",function() { nextChoices(val2); });    // här kan jag nog ändra good / neutral / evil - att de leder till olika
+            choices3.addEventListener("click",function() { nextChoices(bananFluga); });    // här kan jag nog ändra good / neutral / evil - att de leder till olika
 
             storyTop.innerHTML = stories[0].kapitel[i].story.storyText;  // texten på toppen av skärmen
             ////////////////////////////////////////////////
@@ -157,9 +170,12 @@ function createChoices(jsonCode) {
 }
 
 
-function nextChoices() {
+function nextChoices(bananFluga) {
+
+    alert(bananFluga);
 
     storyChapter++;
+    console.log(bananFluga);
    
 // vilken story som ska visas innan nästa "val", kan även välja vilken av de 3 seten av val som ska visas vid nästa val
     if (this.id == "choices1") {

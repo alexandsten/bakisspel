@@ -47,33 +47,8 @@
                     "story":{
 						"storyText":"As you scream from the top of your lungs - IS ANYONE THERE!? You hear the neightbot telling you to shut up."
 					}
-				},
-				{
-					"titel":{
-						"name": "3",
-						"next":"7more"
-					},
-					"choices":{
-						"choiceText":"Tell yourself that you need a drink",
-						"url":"https://www.imdb.com/name/nm0337773/"
-					},
-					"runtime":"1 timmar 46 min",
-					"age":"15 årsgräns",
-					"starttime":"21.15"
-				},
-                {
-					"titel":{
-						"name": "4",
-						"next":"8memory"
-					},
-					"choices":{
-						"choiceText":"Reminiscent of how you embarresed yourself years ago",
-						"url":"https://www.imdb.com/name/nm0615592/?ref_=nv_sr_srsg_0"
-					},
-					"runtime":"2 timmar 49 min",
-					"age":"15 årsgräns",
-					"starttime":"21.00"
 				}
+				
 			],
 			"genredescription":"En filmgenre som ger tittaren en rysligt hårresande upplevelse.",
 			"contact":{
